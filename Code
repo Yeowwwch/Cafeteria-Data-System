@@ -1,0 +1,132 @@
+from collections import Counter
+#Cafeteria Data System
+'''1.)This code contains lines for a cafeteria data script that can calculate the total items sold,
+The total quantity per food item, and finally it can identify the most popular food item.
+'''
+popo_food = []
+popo_bev = []
+total_value=0
+items_sold=0
+
+
+while True:
+  def options():
+    print("           OPTION SCREEN")
+    print("ClearStats")
+    print("Stats")
+    print("Order")
+    print("Leave")
+    caf_choice = input("")
+    if caf_choice == "stats":
+     print("Money made = ",total_value)
+     print("Items Sold = ",items_sold)
+     print("Most popular Food = ",(pop_food),"sales")
+     print("Most popular Beverage = ",(pop_bev), "sales")
+    elif caf_choice == "order":
+      print("You pick up your tray")
+    elif caf_choice == "leave":
+      print("Exiting!")
+  options()
+  print("        MAIN FOOD")
+  print(" pizza  $100")
+  print(" sludge $1.25")
+  print(" mystery product $2.25")
+  print(" cancer ball $0.50" )
+  main_choice = input("")
+  popo_food.append(main_choice)
+  if main_choice =="pizza":
+    total_value=total_value+100
+    items_sold=items_sold+1
+    popo_food.append
+
+
+  elif main_choice =="sludge":
+    total_value=total_value+1.25
+    items_sold=items_sold+1
+    popo_food.append
+
+
+  elif main_choice =="mystery product":
+    total_value=total_value+2.15
+    items_sold=items_sold+1
+    popo_food.append
+
+
+  elif main_choice =="cancer ball":
+    total_value=total_value+0.50
+    items_sold=items_sold+1
+    popo_food.append
+
+
+
+
+  else:
+    main_choice = input("Are you sure")
+  print("You picked "+main_choice+" for $"+str(total_value))
+
+
+
+
+  print("        BEVERAGES")
+  print(" apple juice $1")
+  print(" Holy Grail $120000...")
+  print(" mystery drink $2.25")
+  print(" slurp juice $51.25" )
+  beverage_choice = input("")
+  popo_bev.append(beverage_choice)
+  if beverage_choice =="apple juice":
+    total_value=total_value+1
+    items_sold=items_sold+1
+   
+
+
+
+
+  elif beverage_choice=="holy grail":
+    print("You can't afford this")
+    break
+
+
+
+
+  elif beverage_choice =="mystery drink":
+    total_value=total_value+2.25
+    items_sold=items_sold+1
+   
+   
+  elif beverage_choice =="slurp juice":
+    total_value=total_value+51.25
+    items_sold=items_sold+1
+   
+   
+
+
+
+
+  else:
+    beverage_choice = input("Are you sure")
+  print("Your total now is $"+str(total_value))
+
+
+
+
+  print("You have ordered a "+main_choice+" sandwich "+beverage_choice+",Your total is $"+str(total_value))
+  print("Order successfully comepleted!")
+  pop_food = Counter(popo_food).most_common(1)[0][0]
+  pop_bev = Counter(popo_bev).most_common(1)[0][0]
+#The problem my code solves is people having trouble organizing cafeteria sales, food items, and struggles around the cafeteria
+
+
+
+
+#I organized my data by sorting it into sections and making it easier to read.
+
+
+
+
+#I think the hardest part about this code was trying to identify the most popular food item
+
+
+
+
+#If I had more time I would improve on the stats and maybe add more stats
